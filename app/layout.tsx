@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Fraunces, Source_Sans_3 } from "next/font/google";
+import { AppPasswordGate } from "./components/AppPasswordGate";
 import "./globals.css";
 
 const displayFont = Fraunces({
@@ -35,7 +36,7 @@ export default function RootLayout({
       <body
         className={`${displayFont.variable} ${bodyFont.variable} antialiased`}
       >
-        {children}
+        <AppPasswordGate>{children}</AppPasswordGate>
       </body>
     </html>
   );
